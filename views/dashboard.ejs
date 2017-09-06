@@ -1,0 +1,46 @@
+<% include ./partials/head%>
+	<!-- Sart Header Area-->
+	<header class="header">
+		<div class="innerContent">
+			<div class="fl">
+				<div class="db_header">
+					<h2><a href="/dashboard"><%= authTitle %></a></h2>
+				</div>
+			</div>
+			<div class="fr">
+				<div class="logo">
+					<a href="/"><img src="/assets/img/logo.png" alt="Froggo"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--End Header Area-->
+
+	<!-- Sart Content-->
+	<section class="content">
+		<div class="innerContent">
+			<!--Menu Area-->
+			<% include ./partials/sidebar%>
+			<!--End of Menu Area-->
+
+			<!--Content Area-->
+			<div class="content_area" id="addurl">
+				<div class="addurl fix">
+					<form action="/dashboard" method="POST" >
+						<input type="text" name="url" required>
+						<select required class="category" name="category">
+							<option value="">Select Option</option>
+							<option value="Trending News">Trending news</option>
+							<option value="Blog">Video</option>
+							<option value="Food">Food</option>
+							<option value="Travel">Travel</option>
+							<option value="Game">Game</option>
+						</select>
+						<input type="submit" name="submit" value="Add URL">
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End Content Area-->
+	<% include ./partials/footer%>

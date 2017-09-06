@@ -1,0 +1,38 @@
+<%include ./partials/head%>
+	<!-- Sart Header Area-->
+	<header class="header">
+		<% include ./partials/header%>
+	</header>
+	<!--End Header Area-->
+
+	<section class="signin" id="signIn">
+		<div class="innerContent">
+			<form class="signInForm" action="/login" method="POST">
+				<h2 class="fl">Sign In</h2>
+				<a class="fr closeBtn" id="signInClose">X</a>
+				<!-- <span class="errorMsg"><%message%></span> -->
+				<input type="text" name="username" placeholder="Your Email Here">
+				<input type="password" name="password" placeholder="Password">
+				<input type="submit" name="submit" value="Sign in">
+				<div class="fl remember">
+					<input id="checkbox" class="fl" type="checkbox" name="remember">
+					<label for="checkbox" id="remember">Remember Me</label>
+				</div>
+				<div class="fr forget">
+					<a id="fpass">Forget Password</a>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section id="forgetPass" style="display: none">
+		<div class="innerContent">
+			<form class="signInForm" action="/login" method="POST">
+				<h2 class="fl">Forget Password</h2>
+				<a class="fr closeBtn" id="fClose">X</a>
+				<input type="text" name="email" placeholder="Your Email Here">
+				<input type="submit" name="submit" value="Submit">
+			</form>
+		</div>
+	</section>
+<% include ./partials/footer%>

@@ -1,0 +1,106 @@
+<% include ./partials/head%>
+	<!-- Sart Header Area-->
+	<header class="header">
+	<% include ./partials/header%>
+	</header>
+	<!--End Header Area-->
+	<% var c=0%>
+	<!--Trending Area-->
+	<div class="content fix">
+
+			<div class="fix section">
+			<!--InnerContent Started-->
+			<div class="innerContent">
+				<!--Row Started-->
+			<%if(domains==null){
+				%><h2>No Entry Available</h2><%
+			}else{
+				var cat = []
+				for(var i in images){
+					var image = images[i];
+					%>
+					<!-- <div class="content_title">
+						<%
+							if(cat.includes(categories[i])){
+								cat.push('');
+							}else{
+								cat.push(categories[i]);
+								%><h1><%=categories[i]%></h1><%
+							}
+						%>
+					</div> -->
+					<div class="row section <%-categories[i]%>">
+						<div class="widget widget_1" id="try">
+							<div id="post">
+								<img src="/images/<%=image%>.png" alt="Sample Alternative" class="post_image" onclick="overlay(this.id, <%-domains[i]%>)" id="<%=image%>">
+								<a id="<%=image%>" onclick="showModel(this.id, '<%-domains[i]%>', <%-i%>, '<%-comments[i]%>', '<%-photos[i]%>', '<%-users[i]%>')">
+									<div id="overlay" class="overlay">
+
+										<%for(var k=comments[i].length-1;k>=comments[i].length-5;k--){
+											if(k==-1)break;
+											var comment = comments[i][k]
+											%>
+											<p style="font-size:16px;text-align:left;padding:5px;"><i style="padding-right:5px;" class="fa fa-comment"></i><%=comment%></p>
+											<%
+										}%>
+										<span id="categoryName"><%=categories[i]%></span>
+									</div>
+								</a>
+							</div>
+							<h4>
+								<a id="<%=image%>" onclick="showModel(this.id, '<%-domains[i]%>', <%-i%>, '<%-comments[i]%>', '<%-photos[i]%>', '<%-users[i]%>')">
+
+								<%=urlTitle[i].substring(0, 60)%>
+								<%if(urlTitle[i].length>60){
+									%> ...<%
+								}%>
+							</a>
+							</h4>
+						</div>
+					</div>
+					<%
+					}
+				}%>
+		</div>
+		<!--End of video Area Area-->
+
+	<!--End of Content-->
+
+</div>
+<!--End of Main Area-->
+
+
+
+<!--Start Model-->
+
+<div id="model_preview">
+	<div class="innerContent">
+		<div id="model">
+			<div id="modelInside">
+				<div id="model_1">
+					<div class="model_image">
+						<img id="preview_image" src="assets/img/404.png" alt="Image Preview">
+						<span id="model_overlay">
+							<button><a id="domain" href="">Go Check it Out</a></button>
+						</span>
+					</div>
+					<span class="close_btn" id="close_btn">
+						<img src="assets/img/close.png" alt="Close">
+					</span>
+					<div id="commentsList">
+						No Comment Available
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--End Mode-->
+
+<script type="text/javascript" src="assets/js/menu.js"></script>
+<script type="text/javascript" src="assets/js/preview.js"></script>
+
+
+</body>
+</html>

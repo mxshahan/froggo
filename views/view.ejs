@@ -1,0 +1,67 @@
+<% include ./partials/head%>
+	<!-- Sart Header Area-->
+	<header class="header">
+		<div class="innerContent">
+			<div class="fl">
+				<div class="db_header">
+					<h2><a href="/dashboard"><%= authTitle %></a></h2>
+				</div>
+			</div>
+			<div class="fr">
+				<div class="logo">
+					<a href="/"><img src="../assets/img/logo.png" alt="Froggo"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--End Header Area-->
+
+	<!-- Sart Content-->
+	<section class="content">
+		<div class="innerContent">
+			<!--Menu Area-->
+			<% include ./partials/sidebar%>
+			<!--End of Menu Area-->
+
+			<!--Content Area-->
+			<div class="content_area" id="viewall">
+				<div class="view fix">
+					<table border="1px">
+						<tr class="thead">
+							<td>Id</td>
+							<td id="domain">Domain</td>
+							<td id="subdomain">Sub-Domain</td>
+							<td>Category</td>
+							<td>Comment</td>
+							<td>Upvoted</td>
+							<td>Downvoted</td>
+							<td>Action</td>
+						</tr>
+						<tr>
+							<td id="id">15</td>
+							<td id="domain">www.facebook.com</td>
+							<td id="subdomain">facebook.com/?watch=151524d54151524d54151524d54</td>
+							<td id="category">News</td>
+							<td id="comment">50</td>
+							<td id="upvted">3800</td>
+							<td id="downvoted">3700</td>
+							<td id="action">
+								<a href=""><i class="fa fa-eye"></i></a>
+								<a href=""><i class="fa fa-edit"></i></a>
+								<a href=""><i class="fa fa-remove"></i></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--End of Content Area-->
+
+		</div>
+	</section>
+	<!--End Content Area-->
+</div>
+<!--End of main area-->
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<% include ./partials/head%>
+	<!-- Sart Header Area-->
+	<header class="header">
+		<div class="innerContent">
+			<div class="fl">
+				<div class="db_header">
+					<h2><a href="/dashboard"><%= authTitle %></a></h2>
+				</div>
+			</div>
+			<div class="fr">
+				<div class="logo">
+					<a href="/"><img src="../assets/img/logo.png" alt="Froggo"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--End Header Area-->
+
+	<!-- Sart Content-->
+	<section class="content">
+		<div class="innerContent">
+			<!--Menu Area-->
+			<% include ./partials/sidebar%>
+			<!--End of Menu Area-->
+
+			<!--Content Area-->
+			<div class="content_area" id="viewall">
+				<div class="account fix">
+						<form action="/database/account" enctype="multipart/form-data" >
+							<input type="text" name="" value="">
+						</form>
+				</div>
+			</div>
+			<!--End of Content Area-->
+
+		</div>
+	</section>
+	<!--End Content Area-->
+</div>
+<!--End of main area-->
+
+
+</body>
+</html>
